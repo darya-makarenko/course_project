@@ -1,0 +1,46 @@
+﻿<Window x:Class="Курсач.Differences"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Differences" Height="560" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\darya\Documents\Visual Studio 2012\Projects\Курсач\Курсач\sotes.jpg" Stretch="Fill"></ImageBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2.8*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" Margin="0 15">
+            <ListBox x:Name="lbxChooseLevel" Background="Transparent" Foreground="White" FontSize="20" 
+                     BorderThickness="2" HorizontalAlignment="Right" Margin="0,0,-0.333,0" SelectionMode="Single">
+                <TextBlock Text="Выберите уровень" FontWeight="SemiBold" TextDecorations="Underline"></TextBlock>
+                <ListBoxItem Content="Лёгкий" Foreground="White" HorizontalContentAlignment="Stretch" 
+                             VerticalContentAlignment="Center" Margin="10" Selected="ChangeGridLevel"></ListBoxItem>
+                <ListBoxItem Content="Средний" Foreground="White" HorizontalContentAlignment="Stretch" 
+                             VerticalContentAlignment="Center" Margin="10" Selected="ChangeGridLevel"></ListBoxItem>
+                <ListBoxItem Content="Тяжёлый" Foreground="White" HorizontalContentAlignment="Stretch"
+                             VerticalContentAlignment="Center" Margin="10" Selected="ChangeGridLevel"></ListBoxItem>
+            </ListBox>
+            <Label Content="Ваши очки:" FontSize="25" Foreground="White" 
+                   Margin="32,90,31.667,10" FontWeight="SemiBold" HorizontalAlignment="Center"></Label>
+            <Label x:Name="lbUserScore" Content="00" FontSize="70" Foreground="Crimson" 
+                   HorizontalAlignment="Center" BorderThickness="4" BorderBrush="Aqua"></Label>
+            <Button x:Name="btnGetBack" Foreground="LightSkyBlue" FontSize="15" FontWeight="SemiBold"  FontStyle="Italic"
+                    Content="Вернуться в меню" Background="Transparent" Margin="20" Click="Accept_Click"></Button>
+        </StackPanel>
+        <Grid x:Name="GameGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+        </Grid>
+    </Grid>
+</Window>
